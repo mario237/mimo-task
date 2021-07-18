@@ -1,21 +1,23 @@
- <!-- Nav bar -->
+<!-- Nav bar -->
 
- <nav class="navbar-container fixed-top">
-    <div class="logo">
-        <a href="index.html">
-            <img class="w-100" src="assets/images/favicon.png" alt="">
-        </a>
+<nav class="navbar fixed-top">
+    <div class="container">
+        <div class="logo">
+            <a routerLink="home">
+                <img class="w-100" src="assets/images/favicon.png" alt="">
+            </a>
+        </div>
+
+        <ul>
+            <li>
+                <a routerLink="pricing" routerLinkActive="active-link">Pricing</a>
+            </li>
+
+            <li>
+                <a routerLink="dashboard" routerLinkActive="active-link">Dashboard</a>
+            </li>
+        </ul>
     </div>
-
-    <ul>
-        <li>
-            <a href="" class="nav-menu-link">Pricing</a>
-        </li>
-
-        <li>
-            <a href="" class="nav-menu-link">Dashboard</a>
-        </li>
-    </ul>
 </nav>
 
 <!-- End Nav bar -->

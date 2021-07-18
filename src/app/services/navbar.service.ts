@@ -8,14 +8,23 @@ export class NavbarService {
 
   constructor() { }
 
-  
-  changeHeaderBackground() {
+
+  changeNavbarOnScroll(color:string) {
     $(window).on('scroll', () => {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        $('.navbar-container').css('background', '#000')
+        $('.navbar').css('background', `${color}`)
       } else {
-        $('.navbar-container').css('background', 'transparent')
+        $('.navbar').css('background', 'transparent')
       }
     })
+  }
+
+  addNavbarOnComponent() {
+
+    $('.navbar').addClass('component');
+  }
+
+  removeNavbarOnComponent() {
+    $('.navbar').removeClass('component');
   }
 }

@@ -1,0 +1,148 @@
+.price-section {
+    position: relative;
+    inset: 0;
+    height: 100vh;
+    padding-top: 4.5rem;
+
+    .container {
+        max-width: 85%;
+        margin: auto;
+        padding: 5rem 5rem 2rem 4rem;
+        position: relative;
+
+        .price-header {
+            h1 {
+                color: #c50000;
+                font-weight: bold;
+                font-size: 40px;
+            }
+
+            p {
+                color: #333333;
+                a {
+                    cursor: pointer;
+                    color: #c50000;
+                }
+            }
+        }
+
+        .product-container {
+            .choose-product-type {
+                display: flex;
+                flex-wrap: wrap;
+
+                .show {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    background-color: #c50000;
+                    text-transform: uppercase;
+                    width: 259px;
+                    height: 54px;
+                    margin: 25px 17px 25px 0;
+                    position: relative;
+
+                    &::before {
+                        content: "\2BC6";
+                        position: absolute;
+                        top: 28%;
+                        left: 15px;
+                        width: 17px;
+                        height: 10px;
+                        color: #fff;
+                        font-size: 1.3rem;
+                        transform: translateY(-28%);
+                    }
+                }
+
+                .hide {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    background-color: #c50000;
+                    text-transform: uppercase;
+                    width: 259px;
+                    height: 54px;
+                    margin: 25px 17px 25px 0;
+                    position: relative;
+
+                    &::before {
+                        content: "\2BC8";
+                        position: absolute;
+                        top: 30%;
+                        left: 15px;
+                        width: 17px;
+                        height: 10px;
+                        color: #fff;
+                        font-size: 1.3rem;
+                        transform: translateY(-30%);
+                    }
+                }
+            }
+
+            .product-item {
+                margin: 35px 0;
+                display: flex;
+                flex-wrap: wrap;
+                
+
+                .caption {
+                    h4 {
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+
+                    span {
+                        color: #c50000;
+                        font-size: 32px;
+                        font-weight: bold;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 248px;
+                        height: 54px;
+                        margin: 20px 0;
+                        background-color: #fff;
+                        color: #c50000;
+                        border: 1px solid #c50000;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            background-color: #c50000;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.zoom-in-animation {
+    transition: all 0.3s ease-in-out;
+    animation: zoomIn 1s linear;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .price-section {
+        .container {
+            max-width: 100%;
+            padding-left: 2.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+}

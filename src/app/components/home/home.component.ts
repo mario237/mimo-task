@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private _NavbarService:NavbarService) { }
 
   ngOnInit(): void {
-    this._NavbarService.changeHeaderBackground();
+    this._NavbarService.changeNavbarOnScroll('#000');
 
   }
 

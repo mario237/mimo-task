@@ -1,28 +1,85 @@
-.navbar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 11;
-    width: 80%;
-    margin: 0.5rem auto;
-    padding: 1rem;
-    display: flex;
-    transition: all 0.4s ease-in-out;
-    ul {
-        width: 100%;
-        margin-bottom: 0;
+.navbar {
+    padding-bottom: 1.5rem;
+
+    .container {
+        margin: 0.5rem auto;
+        transition: all 0.4s ease-in-out;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        li {
-            a {
-                padding-right: 2.5rem;
-                color: #fff;
-                font-weight: 500;
-                font-size: 18px;
-                transition: all 0.3s ease-in-out;
-                &:hover {
-                    color: #c50000;
+
+        .logo {
+            width: 7%;
+        }
+
+        ul {
+            width: 93%;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                &:nth-child(2) {
+                    margin-left: 2rem;
+                }
+                a {
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 18px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: #c50000;
+                    }
+                }
+            }
+        }
+
+        .active-link {
+            color: #c50000;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                margin-top: 2.6rem;
+                height: 2.5px;
+                background-color: #c50000;
+            }
+        }
+    }
+}
+
+.navbar {
+    &.component {
+        border-bottom: 1px solid #c50000;
+
+        .container {
+            max-width: 90%;
+            padding-left: 5rem;
+
+            .logo {
+                width: 12%;
+                img {
+                    content: url(../../../assets/images/logo_dark.png);
+                }
+            }
+            ul {
+                width: 88%;
+                li {
+                    a {
+                        color: #515151;
+                        font-weight: 500;
+                        font-size: 18px;
+                        transition: all 0.3s ease-in-out;
+                        &:hover {
+                            color: #c50000;
+                        }
+                    }
+
+                    .active-link {
+                        color: #c50000;
+                    }
                 }
             }
         }
@@ -30,28 +87,135 @@
 }
 
 @media screen and (max-width: 1025px) {
-    .navbar-container {
+    .navbar {
         width: 100%;
         margin: 0;
         padding: 1rem 2rem;
     }
+
+    .navbar {
+        &.component {
+            .container {
+                max-width: 90%;
+                padding-left: 3.2rem;
+
+                .logo{
+                    width: 20%;
+                }
+
+                ul {
+                    width: 80%;
+                    li{
+                        .active-link{
+                            &::after{
+                                margin-top: 2.2rem;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 426px) {
-    .navbar-container {
-        .logo {
-            width: 25%;
-            padding-right: 1rem;
+@media screen and (max-width:769px){
+    .navbar {
+        &.component {
+            .container {
+                max-width: 90%;
+                padding-left: 3.2rem;
+
+                .logo{
+                    width: 20%;
+                }
+
+                ul {
+                    width: 80%;
+                    li{
+                        .active-link{
+                            &::after{
+                                margin-top: 1.8rem;
+                            }
+                        }
+                    }
+                }
+                
+            }
         }
-        ul {
-            width: 75%;
-            li {
-                a {
-                    padding-right: 1.7rem;
-                    font-size: 16px;
-                    font-weight: 400;
+    }
+    
+}
+
+@media screen and (min-width:326px) and (max-width: 426px) {
+    .navbar {
+        .container {
+            .logo {
+                width: 20%;
+                padding-right: 0.3rem;
+            }
+            ul {
+                width: 80%;
+                li {
+                    a {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
                 }
             }
         }
     }
+
+    .navbar {
+        &.component {
+            .container {
+                max-width: 100%;
+                padding-left: 0rem;
+                .logo{
+                    width: 30%;
+                }
+
+                ul {
+                    width: 70%;
+                    li{
+                        a{
+                            font-size: 14px;
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .navbar {
+        &.component {
+            .container {
+                max-width: 100%;
+                padding-left: 0rem;
+
+                .logo{
+                    width: 25%;
+                }
+
+                ul {
+                    width: 60%;
+                    li{
+                       a{
+                           font-size: 14px;
+                       }
+                        .active-link{
+                            &::after{
+                                margin-top: 1.7rem;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }  
 }
