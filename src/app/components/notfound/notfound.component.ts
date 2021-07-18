@@ -1,3 +1,4 @@
+import { NavbarService } from './../../services/navbar.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotfoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _NavbarService: NavbarService) { }
 
   ngOnInit(): void {
+    this._NavbarService.changeNavbarOnScroll('#fff');
+    this._NavbarService.addNavbarOnComponent();
   }
+
+  ngOnDestroy(): void {
+    this._NavbarService.removeNavbarOnComponent();
+  }
+
 
 }
