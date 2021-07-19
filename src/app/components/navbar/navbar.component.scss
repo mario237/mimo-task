@@ -86,6 +86,12 @@
     }
 }
 
+@media screen and (max-width: 1440px) {
+    .navbar {
+        padding-bottom: 1.7rem;
+    }
+}
+
 @media screen and (max-width: 1025px) {
     .navbar {
         width: 100%;
@@ -99,55 +105,52 @@
                 max-width: 90%;
                 padding-left: 3.2rem;
 
-                .logo{
+                .logo {
                     width: 20%;
                 }
 
                 ul {
                     width: 80%;
-                    li{
-                        .active-link{
-                            &::after{
+                    li {
+                        .active-link {
+                            &::after {
                                 margin-top: 2.2rem;
                             }
                         }
                     }
                 }
-                
             }
         }
     }
 }
 
-@media screen and (max-width:769px){
+@media screen and (max-width: 769px) {
     .navbar {
         &.component {
             .container {
                 max-width: 90%;
                 padding-left: 3.2rem;
 
-                .logo{
+                .logo {
                     width: 20%;
                 }
 
                 ul {
                     width: 80%;
-                    li{
-                        .active-link{
-                            &::after{
+                    li {
+                        .active-link {
+                            &::after {
                                 margin-top: 1.8rem;
                             }
                         }
                     }
                 }
-                
             }
         }
     }
-    
 }
 
-@media screen and (min-width:326px) and (max-width: 426px) {
+@media screen and (min-width: 326px) and (max-width: 426px) {
     .navbar {
         .container {
             .logo {
@@ -171,20 +174,18 @@
             .container {
                 max-width: 100%;
                 padding-left: 0rem;
-                .logo{
+                .logo {
                     width: 30%;
                 }
 
                 ul {
                     width: 70%;
-                    li{
-                        a{
+                    li {
+                        a {
                             font-size: 14px;
                         }
-                        
                     }
                 }
-                
             }
         }
     }
@@ -197,25 +198,24 @@
                 max-width: 100%;
                 padding-left: 0rem;
 
-                .logo{
+                .logo {
                     width: 25%;
                 }
 
                 ul {
                     width: 60%;
-                    li{
-                       a{
-                           font-size: 14px;
-                       }
-                        .active-link{
-                            &::after{
+                    li {
+                        a {
+                            font-size: 14px;
+                        }
+                        .active-link {
+                            &::after {
                                 margin-top: 1.7rem;
                             }
                         }
                     }
                 }
-                
             }
         }
-    }  
+    }
 }

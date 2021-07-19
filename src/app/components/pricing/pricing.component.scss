@@ -30,54 +30,46 @@
             .choose-product-type {
                 display: flex;
                 flex-wrap: wrap;
+                
 
-                .show {
+                button {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     color: #fff;
                     background-color: #c50000;
                     text-transform: uppercase;
+                    outline: none;
+                    border: none;
                     width: 259px;
                     height: 54px;
                     margin: 25px 17px 25px 0;
                     position: relative;
+                }
 
-                    &::before {
-                        content: "\2BC6";
+                .show {
+                    .toggle-icon {
                         position: absolute;
-                        top: 28%;
+                        top: 50%;
                         left: 15px;
-                        width: 17px;
-                        height: 10px;
-                        color: #fff;
-                        font-size: 1.3rem;
-                        transform: translateY(-28%);
+                        transform: translateY(-50%) rotate(0deg);
+                        width: 25px;
+                        height: 25px;
+                        fill: #fff;
+                        padding: 5px;
                     }
                 }
 
                 .hide {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #fff;
-                    background-color: #c50000;
-                    text-transform: uppercase;
-                    width: 259px;
-                    height: 54px;
-                    margin: 25px 17px 25px 0;
-                    position: relative;
-
-                    &::before {
-                        content: "\2BC8";
+                    .toggle-icon {
                         position: absolute;
-                        top: 30%;
+                        top: 50%;
                         left: 15px;
-                        width: 17px;
-                        height: 10px;
-                        color: #fff;
-                        font-size: 1.3rem;
-                        transform: translateY(-30%);
+                        transform: translateY(-50%) rotate(-90deg);
+                        width: 25px;
+                        height: 25px;
+                        fill: #fff;
+                        padding: 5px;
                     }
                 }
             }
@@ -86,7 +78,6 @@
                 margin: 35px 0;
                 display: flex;
                 flex-wrap: wrap;
-                
 
                 .caption {
                     h4 {
@@ -136,6 +127,8 @@
         transform: scale(1);
     }
 }
+
+
 
 @media screen and (max-width: 426px) {
     .price-section {

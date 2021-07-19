@@ -25,18 +25,24 @@ export class PricingComponent implements OnInit {
 
   setProductType(eventInfo: any, index: number) {
 
+    let clickedElement = eventInfo.target;
 
-    let clickedButtonClass = $(eventInfo.path).attr('class').split(/\s+/);
 
-    if (clickedButtonClass != "show") {
+    if (clickedElement.className.baseVal == 'toggle-icon' || clickedElement.className == '')
+      clickedElement = clickedElement.parentNode.className;
+    else
+      clickedElement = clickedElement.className;
+
+
+    if (clickedElement != "show") {
 
       for (let i = 0; i < 3; i++) {
 
         if (i == index) {
-          let selectedType = $('.product-container .choose-product-type a')[i]
+          let selectedType = $('.product-container .choose-product-type button')[i]
           selectedType.classList.replace('hide', 'show');
         } else {
-          let unSelectedType = $('.product-container .choose-product-type a')[i]
+          let unSelectedType = $('.product-container .choose-product-type button')[i]
           unSelectedType.classList.replace('show', 'hide');
         }
       }
@@ -51,6 +57,8 @@ export class PricingComponent implements OnInit {
 
     }
 
+
+
   }
 
 
@@ -60,7 +68,7 @@ export class PricingComponent implements OnInit {
 
     setTimeout(() => {
       $('.product-item').removeClass('zoom-in-animation')
-    }, 1100);
+    }, 1000);
   }
 
   scrollToProductTopOffset(): void {
@@ -69,7 +77,7 @@ export class PricingComponent implements OnInit {
     if (productTopOffset > 500) {
       $('html , body').animate({
         scrollTop: productTopOffset
-      }, 1100);
+      }, 1000);
     }
   }
 
